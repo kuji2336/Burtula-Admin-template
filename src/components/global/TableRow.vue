@@ -3,7 +3,7 @@
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-          <table class="min-w-full divide-y divide-gray-200">
+          <table class="w-full relative">
             <thead class="bg-gray-50">
               <tr>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -52,6 +52,12 @@
               </tr>
             </tbody>
           </table>
+          <div v-if="!tableData.length" class="flex justify-center w-full">
+             <div>
+               <h1 class="text-center font-bold text-red-600  text-lg mt-5">ჩანაწერები ვერ მოიძებნა!</h1>
+               <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_CWcCII.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+             </div>
+          </div>
         </div>
       </div>
     </div>
