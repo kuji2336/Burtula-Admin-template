@@ -1,24 +1,23 @@
 import { createStore } from 'vuex'
-import moduleA from './moduleA'
-import moduleC from './moduleC'
 export default createStore({
   state: {
-    myName: "kuji"
+    myName: "kuji",
+    userState:'',
   },
   mutations: {
+    setGlobalUser(state, payload){
+      state.userState = payload
+    }
   },
   actions: {
   },
   getters: {
-    getStoreValue(state) {
-      return state.myName
+    getUserState(state) {
+      return state.userState
     }
   },
-  modules: {
-    moduleA,
-    moduleC
-  }
 })
+
 
 
 
